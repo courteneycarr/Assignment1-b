@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.courteneycarr'
+version 'v3.0'
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io'}
+    }
+}
+
+dependencies {
+
+    implementation 'org.terasoluna.gfw:terasoluna-gfw-jodatime:5.7.0.RELEASE'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.github.courteneycarr:Student-Registration-System:v3.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
